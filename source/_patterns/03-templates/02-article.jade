@@ -1,0 +1,20 @@
+#page.page
+  include 'organisms-header'
+  div(role='main')
+    .l-two-col
+      .l-main
+        article.article
+          header.article-header
+            h1 Article Headline Lorem ipsum dolor sit aweofij
+          include 'organisms-article-body'
+        include 'molecules-social-share'
+        include 'organisms-sticky-comment'
+        include 'organisms-comment-thread'
+      // end l-main
+      .l-sidebar
+        include 'organisms-related-posts'
+        include 'organisms-recent-tweets'
+      // end l-sidebar
+    // end l-two-col
+  // End role=main
+  include 'organisms-footer'

@@ -32,11 +32,11 @@ var engine_jade = {
   //findListItemsRE: /({{#( )?)(list(I|i)tems.)(one|two|three|four|five|six|seven|eight|nine|ten|eleven|twelve|thirteen|fourteen|fifteen|sixteen|seventeen|eighteen|nineteen|twenty)( )?}}/g,
 
   // will be needed to cut out trailing line breaks to allow interpolation ( #[include 'atoms-image'] ). Currently not supported
-  emptyTrailingLinesRE: /[\r\f]*$/g,
+  emptyTrailingLinesRE: /^\s+|\s+$/g,
 
   // render it
   renderPattern: function renderPattern(template, data) {
-    var compiled = Jade.compile(template);
+    var compiled = Jade.compile(template.replace(this.emptyTrailingLinesRE, ''));
     return compiled(data);
   },
 

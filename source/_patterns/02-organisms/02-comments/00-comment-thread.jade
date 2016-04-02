@@ -1,0 +1,8 @@
+section.comments.section
+  #comments-container.comments-container
+    h2.section-title 59 Comments
+    include 'molecules-comment-form'
+    ul.comment-list
+      each item in [1,2,3,4,5]
+        include 'molecules-single-comment'
+  include 'molecules-pagination'

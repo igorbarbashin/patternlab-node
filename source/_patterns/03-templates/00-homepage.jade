@@ -1,0 +1,28 @@
+#page.page
+  include 'organisms-header'
+  div(role='main')
+    each item in emergency
+      include 'molecules-alert'
+    each item in hero
+      include 'molecules-block-hero'
+    .g.g-3up
+      each item in touts
+        .gi
+          include 'molecules-inset-block'
+    // end 3up
+    hr
+    .l-two-col
+      .l-main
+        section.section.latest-posts
+          h2.section-title Latest Posts
+          ul.post-list
+            li
+              include 'molecules-media-block'
+          a.text-btn(href='#') View more posts
+      // end .l-main
+      .l-sidebar
+        include 'organisms-recent-tweets'
+      // end .l-sidebar
+    // end .l-two-col
+  // End role=main
+  include 'organisms-footer'

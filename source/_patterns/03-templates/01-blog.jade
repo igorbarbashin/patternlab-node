@@ -1,0 +1,15 @@
+#page.page
+  include 'organisms-header'
+  div(role='main')
+    h1.section-title Our Outdoor Blog
+    .l-two-col
+      .l-main
+        include 'organisms-latest-posts'
+        include 'molecules-pagination'
+      // end l-main
+      .l-sidebar
+        include 'organisms-recent-tweets'
+      // end l-sidebar
+    // end two-col
+  // End role=main
+  include 'organisms-footer'
